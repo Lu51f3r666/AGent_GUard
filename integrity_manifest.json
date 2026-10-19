@@ -1,0 +1,11 @@
+{
+  "algorithm": "sha256",
+  "purpose": "AgentGuard local integrity baseline",
+  "files": {
+    "integrity.py": "99cfed3af22b675a0d63e73a5564a8bb4f7833641fee12a0607c2b122564aa98",
+    "pre_tool_use.py": "7dd9859623fb662ab30179c40f79b83f5e3a64da06883ed0548e3188a40a618e",
+    "post_tool_use.py": "eac3a7d4ef34b52c5ec9c7338199d6e3987b85875a129d316b754f991e272dfa",
+    "core.py": "733496ef01654343b16ca75cdceb41e9e4078f2efd8b90ec07421c1d1eafc4c1",
+    "policy.json": "3cab62dde3a906f7bcaca0a43f9ae98d5f104ebb0466dfd8cc28dfb9bed2a691"
+  }
+}

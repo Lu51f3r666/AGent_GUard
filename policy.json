@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "sensitive_path_fragments": [
+    ".ssh/",
+    "id_rsa",
+    "id_ed25519",
+    ".env",
+    "credentials",
+    "secrets",
+    "token.json",
+    "private_key",
+    "private-key"
+  ],
+  "blocked_command_patterns": [
+    "(?i)\\brm\\s+-rf\\s+/(?:\\s|$)",
+    "(?i)\\bmkfs(?:\\.\\w+)?\\b",
+    "(?i)\\bformat\\s+[a-z]:",
+    "(?i)\\bshutdown(?:\\.exe)?\\b"
+  ]
+}
