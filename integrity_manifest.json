@@ -2,10 +2,19 @@
   "algorithm": "sha256",
   "purpose": "AgentGuard local integrity baseline",
   "files": {
-    "integrity.py": "99cfed3af22b675a0d63e73a5564a8bb4f7833641fee12a0607c2b122564aa98",
-    "pre_tool_use.py": "7dd9859623fb662ab30179c40f79b83f5e3a64da06883ed0548e3188a40a618e",
-    "post_tool_use.py": "eac3a7d4ef34b52c5ec9c7338199d6e3987b85875a129d316b754f991e272dfa",
-    "core.py": "733496ef01654343b16ca75cdceb41e9e4078f2efd8b90ec07421c1d1eafc4c1",
-    "policy.json": "3cab62dde3a906f7bcaca0a43f9ae98d5f104ebb0466dfd8cc28dfb9bed2a691"
+    "integrity.py": "fb92715ab44e5002096691bd64d8c2f62670ccec62e23f66a3433d9d93d51f16",
+    "pre_tool_use.py": "b473aa7febf786b13616c53dffb2f4281e250f4ba5f39b19a934b8ef93d5ae87",
+    "post_tool_use.py": "7c443a876d4751672e48ee3a1512d9053f8326a4ab077a9d361059bcfb65c2d1",
+    "codex_hooks/pre_tool_use.py": "da31cf4e65127542bd29600b75420b267aa37608f9609581d017909a4c8e9af1",
+    "codex_hooks/post_tool_use.py": "4dbd55dc7ba8c314a9051789fdefc2b50b50a8e2a320ec2c115a1bcd8b7c01b8",
+    "codex_hooks/hook.py": "793f49d652cb914a9c8a3e472372433c9c7f940fb2ed8b42b127a3fd01095882",
+    "core.py": "0e16259db897ae262c4f30b2bc1afe2d923f1854d24953f938dc2c5f2ce96e4c",
+    "policy.json": "b6d588fe55611e0c7a653749a7d87408f43023af9f7a3f90cb5647357ed7a9a7",
+    "claude_code_hooks/hook.py": "4b3ecd46df363249685fbd6535528e4e3f4ff3edcfc4259bcf3c988f9dbf2123",
+    "claude_code_hooks/config.py": "95f521bb28b856deed3169d08495442cf54a6d9b16323dfa38a2d4c32f6a471f",
+    "claude_code_hooks/agentguard_pipeline.py": "10753235a5f8f8a39bb14463451a270b41bda1be8f451a5aabd4ae3129f52851",
+    "antigravity_hooks/hook.py": "0c9451016b441ad7789bfd80d52dd92c58396513eab811cf2c746e0747d36999",
+    "antigravity_hooks/config.py": "2f2567db97e3012d2a603260e80824f99fe8a611260f4ddebb83dbbadbd80e2c",
+    "antigravity_hooks/agentguard_pipeline.py": "db310dab0165d3ddc60dfe7e650243d8aa6330e5c69e825e2c43441e559de53e"
   }
 }

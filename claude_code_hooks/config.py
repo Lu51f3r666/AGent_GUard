@@ -2,7 +2,7 @@
 
 # If our code or the pipeline fails during PreToolUse: False = stay silent
 # (normal permission flow), True = deny the call.
-FAIL_CLOSED = False
+FAIL_CLOSED = True
 
 # Pass events to the pipeline and log them, but never return ask or deny.
 LOG_ONLY = False
@@ -10,7 +10,7 @@ LOG_ONLY = False
 # How the pipeline is reached: "module" imports PIPELINE_MODULE and calls its
 # handle(); "http" POSTs the event JSON to PIPELINE_URL and reads the same response.
 PIPELINE_MODE = "module"
-PIPELINE_MODULE = "pipeline_stub"
+PIPELINE_MODULE = "agentguard_pipeline"
 PIPELINE_URL = "http://127.0.0.1:8765/handle"
 PIPELINE_TIMEOUT = 3.0  # seconds, http mode; keep well under the 10 s hook timeout
 

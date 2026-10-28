@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python codex_hooks/pre_tool_use.py",
+            "timeout": 15,
+            "statusMessage": "AgentGuard is checking this action"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python codex_hooks/post_tool_use.py",
+            "timeout": 10,
+            "statusMessage": "AgentGuard is recording the result"
+          }
+        ]
+      }
+    ]
+  }
+}

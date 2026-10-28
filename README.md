@@ -17,20 +17,26 @@ This is a **prototype for the assigned Codex Hook System and Integrity System ta
 
 ## Setup
 
-1. Copy the `.codex` directory into the root of a **test repository**, not a production repository.
-2. Review `.codex/hooks.json` and adjust the command paths if your Codex process starts outside the repository root. The sample assumes the session working directory is the repository root.
-3. Create the initial integrity manifest from the repository root:
+1. Install the Codex hook configuration:
+   ```bash
+   python codex_hooks/install.py
+   ```
+2. Review `.codex/hooks.json` or `codex_hooks/hooks.json` to verify paths.
+3. Initialize the integrity manifest from the repository root:
 
    ```bash
-   python .codex/agentguard/integrity.py init
+   python integrity.py init
    ```
 
-4. Add the hook configuration from `.codex/hooks.json` to the active Codex hook configuration for your version. Codex can load hook configuration from user/project hook configuration layers; avoid blindly overwriting an existing configuration. The included file is a sample to merge/review.
-5. In Codex, review the configured hooks using `/hooks` if prompted.
-6. Run the tests:
+4. Review configured hooks using `/hooks` in Codex if prompted.
+5. Run the test suites:
 
    ```bash
-   python -m unittest discover -s tests -v
+   # Run Codex hook tests
+   python -m unittest discover -s codex_hooks/tests -v
+
+   # Run all repository tests
+   python -m unittest discover -s . -p "test_*.py" -v
    ```
 
 7. Test only in a disposable repository. First try a harmless command such as `python --version`; then verify that a test event targeting a sensitive path is denied by the policy.

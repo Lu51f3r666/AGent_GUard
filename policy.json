@@ -1,20 +1,59 @@
 {
-  "version": 1,
+  "version": 2,
   "sensitive_path_fragments": [
     ".ssh/",
     "id_rsa",
     "id_ed25519",
-    ".env",
     "credentials",
     "secrets",
     "token.json",
     "private_key",
     "private-key"
   ],
+  "deny_path_fragments": [
+    ".ssh/",
+    "id_rsa",
+    "id_ed25519",
+    "credentials",
+    "secrets",
+    "token.json",
+    "private_key",
+    "private-key"
+  ],
+  "ask_path_fragments": [
+    ".env",
+    ".npmrc",
+    ".pypirc",
+    "secrets.yaml",
+    "production.env"
+  ],
+  "protected_files": [
+    "integrity.py",
+    "integrity_manifest.json",
+    "policy.json",
+    "core.py",
+    "pre_tool_use.py",
+    "post_tool_use.py",
+    "hooks.json",
+    "hook.py",
+    "config.py",
+    "agentguard_pipeline.py"
+  ],
   "blocked_command_patterns": [
     "(?i)\\brm\\s+-rf\\s+/(?:\\s|$)",
     "(?i)\\bmkfs(?:\\.\\w+)?\\b",
     "(?i)\\bformat\\s+[a-z]:",
-    "(?i)\\bshutdown(?:\\.exe)?\\b"
+    "(?i)\\bshutdown(?:\\.exe)?\\b",
+    "(?i)\\b(?:bash|sh|zsh)\\s+-i\\s+>&\\s+/dev/tcp",
+    "(?i)\\bnc(?:\\.traditional)?\\s+.*?-e\\s+(?:/bin/sh|/bin/bash|cmd\\.exe|powershell)",
+    "(?i):\\(\\)\\s*\\{\\s*:\\|:&\\s*\\};:"
+  ],
+  "egress_command_patterns": [
+    "(?i)\\bcurl\\s+",
+    "(?i)\\bwget\\s+",
+    "(?i)\\bnc(?:at)?\\s+",
+    "(?i)\\bscp\\s+",
+    "(?i)\\brsync\\s+"
   ]
 }
+

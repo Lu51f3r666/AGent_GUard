@@ -1,0 +1,29 @@
+{
+  "agentguard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python antigravity_hooks/hook.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python antigravity_hooks/hook.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
